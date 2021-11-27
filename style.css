@@ -1,0 +1,290 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+ 
+}
+.container{
+    max-width: 600px;
+    margin: auto;
+}
+
+.main{
+    margin-top: 13px;
+    border: 10px solid purple;
+    border-image:linear-gradient(to right, #21BFE2,#9C55F3 ,#DB1DFA ) 50; 
+    
+  
+}
+
+
+.head{
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;    color: grey;
+    opacity: 80%;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color:slategray;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.head2{
+    display: flex;
+    max-width: 500px;
+    margin: auto;
+    margin-top: 30px;
+  
+}
+#facebook{
+    background-color: #2457e4;
+    border-radius: 10px;
+    width: 240px;
+    padding: 13px;
+    height: 60px;
+}
+#facebook:hover{
+    background-color:#5b81e7;
+    cursor: pointer;
+    transition: 0.5s;
+}
+#google{
+    
+    
+    background-color: white; 
+    border-radius: 10px;
+    width: 240px;
+    margin-left: 20px;
+    padding: 11px;
+    height: 60px;
+    box-shadow: -3px 3px rgb(190, 188, 188);
+
+}
+#google:hover{
+    background-color:#e3e5eb;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+
+.imgtextface{
+    
+    margin-left: 20px;
+    display: flex;
+}
+.imgtextgoog{
+    
+    margin-left: 30px;
+    display: flex;
+}
+.imgface img{
+    width: 40px;
+    height: 35px;  
+}
+#google img{
+    width: 35px;
+    height: 35px;  
+}
+.textface{
+    margin: auto;
+    margin-left: 20px;
+   
+}
+.textgoog{
+    margin: auto;
+    margin-left: 20px;
+   
+}
+
+#facebook a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: larger;
+    font-family: 'Roboto', sans-serif;
+   
+}
+#google a{
+    color: black;
+    text-decoration: none;
+    font-size: larger;  
+    font-family: 'Roboto', sans-serif;
+}
+.formmain{
+    width: 500px;
+    margin: auto;
+    margin-top: 30px;
+  
+}
+.username{
+    padding: 10px 0px;
+}
+
+
+.password{
+    padding: 10px 0px;
+}
+.username label{
+    font-size: 20px;
+    font-weight: bold;  
+}
+.password label{
+    font-size: 20px;
+    font-weight: bold;
+}
+.username input{
+   width: 500px;
+   height: 50px;
+   border-radius: 10px;
+   background-color: #dbe1e2;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-size: 1.3rem;
+  
+}
+.username input:hover{
+    border-color: #21BFE2;  
+    transition: 0.5;
+    box-shadow: -1px 1px ;
+}
+.password input:hover{
+    border-color: #21BFE2;  
+    transition: 0.5;
+    box-shadow: -1px 1px ;
+}
+.password input{
+    width: 500px;
+    height: 50px;
+    font-size: 1.3rem;
+    border-radius: 10px;
+    background-color: #dbe1e2;
+ }
+ .password a{
+     font-size: 15px;
+     padding-left: 10px;
+     color:grey
+ }
+ .submitt{
+     margin-top: 20px;
+ }
+ .submitt input{
+    width: 500px;
+    height: 65px;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 100;
+    cursor: pointer;
+    
+ }
+ .submitt input:hover{
+    background-color:#3f434d;
+    cursor: pointer;
+    transition: 0.5s;
+}
+ .footer{
+     margin-top: 50px;
+     text-align: center;
+     color: grey;
+     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+ }
+ .footer a{
+     color: grey;
+     padding-left: 5px;
+
+ }
+ .formmain p{
+     text-align: center;
+ }
+ .new-page{
+     display: none;
+    
+ }
+
+
+ .newpage-inner {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     background-color: rgb(207, 214, 168);
+     border: 2px solid red;
+     margin: 2rem;
+
+
+ }
+ .newpage-inner li{
+     list-style-type: none;
+     width: 100vw;
+     margin: 5rem;
+     display: flex;
+     align-items: center;
+     justify-content: space-around;
+     font-size: 1.5rem;
+
+     
+
+ }
+ .header{
+     width: 100vw;
+     height: 10vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+     background-color: rgb(177, 206, 31);
+     border-bottom: 2px solid red;
+ }
+ .header li{
+     list-style-type: none;
+ }
+ 
+
+
+ @media screen and (max-width:700px){
+    .main{
+        max-width: 95%;
+        height: 700px;
+        margin: auto;
+        margin-top: 100px;
+        border: 10px solid purple;
+        border-radius: 20px 40px;
+        border-image:linear-gradient(to right, #21BFE2,#9C55F3 ,#DB1DFA ) 50;  
+    }
+    #google{
+        margin-left: 0px;
+        margin-top: 20px;
+        
+    }
+    
+    .password input{
+        width: 250px;
+        height: 30px;
+        
+     }
+     .username input{
+        width: 250px;
+        height: 30px;
+     }
+     .submitt input{
+        width: 250px;
+        height: 50px;
+        margin: auto;
+     }
+     .footer{
+         text-align: justify;
+     }
+     .head2{
+         display: block;
+         max-width: 250px;
+         margin: auto;
+         margin-top: 30px;
+            
+     }
+     .formmain{
+        max-width: 250px;
+        margin: auto;
+        margin-top: 50px;
+     }
+    
+ }

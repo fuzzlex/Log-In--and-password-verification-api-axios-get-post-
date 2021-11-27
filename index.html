@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="js/aes.js"></script>
+    <script src="js/Extentions.js"></script>
+    <script src="js/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="main">
+            <div class="head">
+                <h1>Sign In With</h1>
+                
+            </div>
+            <div class="head2">
+                <div id="facebook">
+                    <div class="imgtextface">
+                        <div class="imgface">
+                            <img src="facebook.png" alt="">
+                        </div>
+                        <div class="textface">
+                            <a href="https://www.facebook.com">Facebook</a>
+                        </div>
+                    </div>
+                </div>
+                <div id="google">
+                    <div class="imgtextgoog">
+                        <div class="imggoog">
+                            <img src="google.jpg" alt="">
+                        </div>
+                        <div class="textgoog">
+                            <a href="https://www.google.com">Google</a>
+                        </div>
+                    </div>
+                </div>
+    
+            </div>
+            <div class="formmain">
+                <form  name="usepass"  >
+                    <div class="username">
+                        <label for="username">Username</label><br><br>
+                        <input type="text" id="username" name="username" placeholder="Please enter username.." >
+                    </div>
+                    <div class="password">
+                        <label for="password">Password<a href="#">Forgot ?</a> </label><br><br>
+                        <input type="password" id="password" name="password" placeholder="Please enter password.." >
+                    </div>
+                    <div class="submitt">
+                        <input type="submit" value="Sign In">
+                    </div>
+                    <div class="footer">
+                        <p>Not a member?<a href="#">Sign up now</a></p>
+                    </div>
+                
+                   
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="new-page">
+        <ul class="header">
+            <li>ID</li>
+            <li>Email</li>
+            <li>Name</li>
+            <li>Image</li>
+        </ul>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
