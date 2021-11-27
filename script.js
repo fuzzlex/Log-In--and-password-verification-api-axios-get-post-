@@ -4,54 +4,62 @@ const submitButton = document.querySelector(".submitt input");
 const container = document.querySelector(".container");
 const newpage = document.querySelector(".new-page")
 
-window.onload = ()=>{
+window.onload = () => {
     setTimeout(setUsernamePass, 1000)
 }
 
-const setUsernamePass = () =>{
+const setUsernamePass = () => {
     username.value = "eve.holt@reqres.in"
     password.value = "pistol"
-    localStorage.setItem("username",  EncryptStringAES(username.value))
-    localStorage.setItem("password",  EncryptStringAES(password.value))
+    localStorage.setItem("username", EncryptStringAES(username.value))
+    localStorage.setItem("password", EncryptStringAES(password.value))
 
 }
 
-submitButton.addEventListener("click", (e)=>{
+submitButton.addEventListener("click", (e) => {
     e.preventDefault();
     apisentRegister();
 
 
 })
 
-const apisentRegister = async () =>{
-    const dataBody = {
-        username : username.value,
-        password : password.value
-    }
-    const response = await axios({
-        url : "https://reqres.in/api/register",
-        data : dataBody,
-        method : "post"
-    })
-    const {data} = response
-    if(data.token == undefined){
-        alert(response.error)
-    }
-    else{
+const apisentRegister = async () => {
+    try {
+        const dataBody = {
+            username: username.value,
+            password: password.value
+        }
+        const response = await axios({
+            url: "https://reqres.in/api/register",
+            data: dataBody,
+            method: "post"
+        })
+        const {
+            data
+        } = response
+
         localStorage.setItem("apikey", EncryptStringAES(data.token))
         container.remove();
         newpage.style.display = "block"
         getapiSource()
+
+    } catch (error) {
+        alert("You enter invalid username or password!!!! Please try again!")
+
     }
+
+
 }
 
-const getapiSource = async () =>{
+const getapiSource = async () => {
     const response = await axios({
-        url : "https://reqres.in/api/users?page=1",
+        url: "https://reqres.in/api/users?page=1",
     })
-    const {data} = response;
+    const {
+        data
+    } = response;
     data.data.forEach(element => {
-        newpage.innerHTML +=  ` 
+        newpage.innerHTML += ` 
         <ul class="newpage-inner" >
         <li >${element.id}</li>  
         <li>${element.email}</li>
@@ -62,7 +70,7 @@ const getapiSource = async () =>{
  </ul>
  
  `
-        
+
     });
-   
+
 }
